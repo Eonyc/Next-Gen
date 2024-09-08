@@ -244,11 +244,13 @@ h2 {
     background-color: #4A90E2;
     color: #ffe;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #124a8b;
     border-radius: 5px;
     cursor: pointer;
     font-family: "Pixelify Sans", sans-serif;
     text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .sign-in-btn {
@@ -380,7 +382,7 @@ h2 {
 .game-item-t details[open] ul {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(-30px); /* Desplazamiento suave hacia arriba */
+    transform: translateX(-50%) translateY(-30px); 
 }
 
 .game-item-t details ul li{
@@ -544,29 +546,6 @@ h2 {
     border-radius: 10px;
 }
 
-.footer {
-    background-color: hsla(261, 60%, 28%, 0.091);
-    color: #ffe;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-}
-
-.footer p {
-    margin: 0;
-}
-
-.footer .social-icons {
-    margin-top: 10px;
-}
-
-.footer .social-icons a {
-    color: #ffe;
-    font-size: 1.5em;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
 .filter-bar {
     display: flex;
     top:50px;
@@ -671,6 +650,28 @@ h2 {
     margin: 10px 0;
 }
 
+.footer {
+    background-color: hsla(261, 60%, 28%, 0.091);
+    color: #ffe;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    color: #ffe;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+}
 
 
 
@@ -721,35 +722,40 @@ h2 {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 480px) {
     .menu-icon {
         display: block; 
-        z-index: 5;
+        position: relative;
+        width: 40px;
+        height: 40px;
     }
 
     .nav-list, .nav-list-t {
         display: none;  
         position: absolute;
-        top: 100%;
+        top: 50%;
         right: 10px;
         background: #266cbcfb;
         text-align:end;
         flex-direction: column;
         border-radius: 10px;
+        width: 100%;
+        max-width: 250px;
         z-index: 5;
     }
 
     .nav-list, .nav-list-t li {
         padding: 10px;
+        font-size: 1rem;
     }
 
     #menu-toggle:checked + .menu-icon + .nav-list,  #menu-toggle:checked + .menu-icon + .nav-list-t {
         display: flex; 
-        z-index: 5;
+    
     }
 
     .top-games, .top-games-t, .featured-games, .categories {
-        padding: 20px;
+        padding: 15px;
     }
 
     .banner .slider {
@@ -760,14 +766,14 @@ h2 {
         opacity: 1;
         top:0;
         display: block;
-        padding: 20px;
+        padding: 10px;
         text-align: center;
     }
 
     .banner .content-p h1 {
         top:5px;
-        font-size: 5em; 
-        line-height: 1.2em;
+        font-size: 3em; 
+        line-height: 1.1em;
         color: #25283b;
     }
 
@@ -776,9 +782,8 @@ h2 {
     }
 
     .banner .content-p h2 {
-        top: 15rem;
-        font-size: 2em;
-        z-index: 3;
+        top: 10rem;
+        font-size: 1.5em;
     }
 
     .banner .content-p .model {
@@ -790,7 +795,7 @@ h2 {
     .banner .content-p .info {
         max-width: 100%; 
         text-align: center;
-        font-size: 1em;
+        font-size: .9em;
     }
 
     .filter-bar {
@@ -804,27 +809,66 @@ h2 {
         margin-bottom: 10px; 
     }
 
-
-    .game-details h2 {
-        font-size: 1.5em; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    .top-games {
+        padding: 10px;
     }
 
-    .price {
-        font-size: 1.2em; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    .games-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centra las columnas */
+        gap: 10px;
+    }
+
+    .game-item, .game-item-t, .category-item{
+        flex: 1 1 calc(50% - 10px); 
+        max-width: 180px; 
+        text-align: center;
+    }
+
+    .game-item img, .game-item-t img,.category-item img {
+        width: 100%;
+    }
+
+    .game-details h2 {
+        font-size: 1.2em; 
+    }
+
+    .genre{
+        font-size: 0.7rem;
+    }
+
+    .game-title{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .game-section{
+        overflow: hidden;
+    }
+
+    .game-details p{
+        max-width: 65%;
+        height: 70%;
+       
     }
 
     .game-image {
-        max-width: 40%; /* Ajusta el ancho máximo de la imagen en pantallas pequeñas */
+        height: 150px;
+        max-width: 20%; 
     }
+
+    .price {
+        font-size: 1em; 
+    }
+    
 
     .buy-button{
         width: 100px;
 
     }
 
-    .game-details p{
-        max-width: 80%;
-       
-    }
+    
+
 }
 
