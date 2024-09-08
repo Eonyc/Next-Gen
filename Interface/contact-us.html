@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Next-Gen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-t">
+        <nav class="navbar-t">
+            <h1 data-content="Next-Gen">Next-Gen</h1>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-list-t">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ourshop.html">Our Shop</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><button class="sign-in-btn">Sign In</button></li> </ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-banner">
+            <div class="contact-info">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Whether you have questions, feedback, or just
+                    want to say hello, feel free to get in touch using the contact form below.</p>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form >
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Name"required>
+                </div>
+                <div class="form-group">
+                    <label for="email" ></label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message"></label>
+                    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <section class="contact-details">
+            <h2>Our Contact Information</h2>
+            <div class="details">
+                <p><strong>Address:</strong> 123 Gaming Street, Game City, GC 12345</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Email:</strong> <a href="mailto:info@next-gen.com">info@next-gen.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright © 2024 Next-Gen. All rights reserved.</p>
+        <div class="social-icons">
+        </div>
+    </footer>
+</body>
+</html>
